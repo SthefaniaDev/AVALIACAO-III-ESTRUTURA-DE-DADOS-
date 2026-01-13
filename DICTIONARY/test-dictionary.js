@@ -17,14 +17,34 @@ console.log(dict.get('idade'));
 console.log("\nVerificando se a chave 'curso' existe...");
 console.log(dict.hasKey('curso'));
 
+console.log("\nImprimindo todas as chaves do dicionário...");
+console.log(dict.keys());
+
+console.log("Imprimindo todos os valores do dicionário...");
+console.log(dict.values());
+
+console.log("\nImprimindo pares chave-valor (keyValues)...");
+console.log(dict.keyValues());
+
 console.log("\nTamanho atual do dicionário...");
 console.log(dict.size());
 
 console.log("\nVerificando se o dicionário está vazio...");
 console.log(dict.isEmpty());
 
+console.log("\nPercorrendo o dicionário com forEach...");
+dict.forEach((key, value) => {
+    console.log(key + " => " + value);
+});
+
+console.log("\nConvertendo dicionário para string...");
+console.log(dict.toString());
+
 console.log("\nRemovendo a chave 'curso'...");
 console.log(dict.remove('curso'));
+
+console.log("\nChaves após remoção...");
+console.log(dict.keys());
 
 console.log("Tamanho após remoção...");
 console.log(dict.size());
