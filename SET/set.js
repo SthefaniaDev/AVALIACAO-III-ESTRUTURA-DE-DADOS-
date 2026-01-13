@@ -32,4 +32,8 @@ module.exports = class Set {
         this.count = 0;
     }
 
+    size(){ // Retorna a quantidade de elementos dentro do conjunto
+        return this.count;
+    }
+
 }
