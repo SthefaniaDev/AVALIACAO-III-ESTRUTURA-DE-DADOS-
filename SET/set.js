@@ -26,4 +26,10 @@ module.exports = class Set {
         }
         return false; // Indica que a ação não foi realizada, pois o elemento não existe
     }
+
+    clear(){  // Remove todos os elementos do conjunto e zera o contador
+        this.items = {}; 
+        this.count = 0;
+    }
+
 }
