@@ -36,4 +36,8 @@ module.exports = class Set {
         return this.count;
     }
 
+    values(){ // Retorna um array com todos os valores armazenados no conjunto
+        return Object.values(this.items);
+    }
+
 }
