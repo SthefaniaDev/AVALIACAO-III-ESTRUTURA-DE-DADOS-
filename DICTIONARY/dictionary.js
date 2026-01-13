@@ -16,4 +16,13 @@ module.exports = class Dicionary{
         }
         return false;
     }
+
+    /*Remove um par (chave -> valor) do dicionário */
+    remove(key){
+        if(this.hasKey(key)){
+            delete this.table[key];
+            return true;
+        }
+        return false;
+    }
 }
