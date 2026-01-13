@@ -41,6 +41,11 @@ module.exports = class Dicionary{
         return Object.keys(this.table).length;
     }
 
+       /*Retorna um array com todas as chaves do dicionário */
+    keys(){
+        return Object.keys(this.table);
+    }
+
     /*Verifica se o dicionário está vazio */
     isEmpty(){
         return this.size() === 0;
