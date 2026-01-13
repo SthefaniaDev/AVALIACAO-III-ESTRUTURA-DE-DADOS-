@@ -35,4 +35,9 @@ module.exports = class Dicionary{
     clear(){
         this.table = {};
     }
+
+    /*Retorna a quantidade de pares no dicionário */
+    size(){
+        return Object.keys(this.table).length;
+    }
 }
