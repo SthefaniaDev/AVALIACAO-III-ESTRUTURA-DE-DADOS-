@@ -25,4 +25,9 @@ module.exports = class Dicionary{
         }
         return false;
     }
+
+    /*Obtém o valor associado a uma chave */
+    get(key){
+        return this.hasKey(key) ? this.table[key] : undefined;
+    }
 }
