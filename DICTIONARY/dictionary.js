@@ -58,7 +58,7 @@ module.exports = class Dicionary{
     isEmpty(){
         return this.size() === 0;
     }
-}
+
 
     /* Retorna um array de pares [chave, valor] */
     keyValues(){
@@ -70,3 +70,16 @@ module.exports = class Dicionary{
         }
         return pares;
     }
+
+    
+    /* Percorre o dicionário executando uma função callback */
+    forEach(callbackFn){
+        const pares = this.keyValues();
+        for(let i = 0; i < pares.length; i++){
+            const result = callbackFn(pares[i][0], pares[i][1]);
+            if(result === false){
+                break;
+            }
+        }
+    }
+}
