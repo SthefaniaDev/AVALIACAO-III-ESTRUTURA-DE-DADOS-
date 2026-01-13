@@ -30,4 +30,9 @@ module.exports = class Dicionary{
     get(key){
         return this.hasKey(key) ? this.table[key] : undefined;
     }
+
+    /*Remove todos os elementos do dicionário */
+    clear(){
+        this.table = {};
+    }
 }
