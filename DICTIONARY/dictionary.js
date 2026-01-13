@@ -40,4 +40,9 @@ module.exports = class Dicionary{
     size(){
         return Object.keys(this.table).length;
     }
+
+    /*Verifica se o dicionário está vazio */
+    isEmpty(){
+        return this.size() === 0;
+    }
 }
