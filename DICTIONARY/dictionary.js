@@ -53,9 +53,20 @@ module.exports = class Dicionary{
         return Object.values(this.table);
     }
 
-    
+
     /*Verifica se o dicionário está vazio */
     isEmpty(){
         return this.size() === 0;
     }
 }
+
+    /* Retorna um array de pares [chave, valor] */
+    keyValues(){
+        const pares = [];
+        for (const key in this.table){
+            if(this.hasKey(key)){
+                pares.push([key, this.table[key]]);
+            }
+        }
+        return pares;
+    }
