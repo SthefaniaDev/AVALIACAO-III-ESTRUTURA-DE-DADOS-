@@ -82,4 +82,17 @@ module.exports = class Dicionary{
             }
         }
     }
+    
+    /* Retorna o dicionário em formato de string */
+    toString(){
+        if(this.isEmpty()){
+            return '';
+        }
+        const pares = this.keyValues();
+        let str = pares[0][0] + ':' + pares[0][1];
+        for(let i = 1; i < pares.length; i++){
+            str += ', ' + pares[i][0] + ':' + pares[i][1];
+        }
+        return str;
+    }
 }
