@@ -34,5 +34,14 @@ module.exports = class HashTable {
     const bucket = this.table[position]; // 12. Pega o saquinho daquela gaveta.
 
     if (!bucket) return undefined; // 13. Se a gaveta estiver vazia, não tem nada lá.
+
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) {
+        // 14. Procura o nome dentro do saquinho.
+        return bucket[i][1]; // 15. Se achar, devolve a informação.
+      }
+    }
+    return undefined;
   }
+  // O remove segue a mesma lógica: acha a gaveta, procura no saquinho e corta (splice) fora.
 };
