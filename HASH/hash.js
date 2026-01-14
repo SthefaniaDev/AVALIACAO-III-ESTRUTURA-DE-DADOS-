@@ -44,4 +44,22 @@ module.exports = class HashTable {
     return undefined;
   }
   // O remove segue a mesma lógica: acha a gaveta, procura no saquinho e corta (splice) fora.
+
+  remove(key) {
+    const position = this.hash(key);
+    const bucket = this.table[position];
+
+    if (!bucket) return false;
+
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) {
+        bucket.splice(i, 1);
+        if (bucket.length === 0) {
+          delete this.table[position];
+        }
+        return true;
+      }
+    }
+    return false;
+  }
 };
